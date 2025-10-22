@@ -28,17 +28,37 @@ public class RectLoop extends MyFrame2 {
 
 public class RectLoop extends MyFrame2 {
 	public void run() {
-		setColor(0,128,0);
+		//setColor(0,128,0);
 		
 		int y = 50;
 		for (int i=0 ; i<10 ; i++) {
 			
+			int c=170;
 			int x=30;
 			for(int j=0 ; j<10 ; j++) {
 				if((i+j)%6==0) {
-					fillRect(x,y,10,10);
+					setColor(c,0,0);
+					//fillRect(x,y,10,10);
 					x+=20;
 				}
+				else if((i+j)%3==0) {
+					setColor(0,c,0);
+					//fillRect(x,y,10,10);
+					x+=20;
+				}
+				else if((i+j)%2==0) {
+					setColor(0,0,c);
+					//fillRect(x,y,10,10);
+					x+=20;
+				}
+				else {
+					setColor(c,c,c);
+					//fillRect(x,y,10,10);
+					x+=20;
+				}
+				
+				fillRect(x,y,10,10);
+				
 						
 			}
 			y+=20;
