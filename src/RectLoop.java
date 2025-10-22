@@ -58,8 +58,6 @@ public class RectLoop extends MyFrame2 {
 				}
 				
 				fillRect(x,y,10,10);
-				
-						
 			}
 			y+=20;
 		}	
